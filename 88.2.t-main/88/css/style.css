@@ -1,0 +1,296 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: #0a0b0e;
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(0, 255, 157, 0.08) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(0, 191, 255, 0.08) 0px, transparent 50%);
+    background-attachment: fixed;
+    color: #e2e8f0;
+    padding-top: 90px;
+    padding-bottom: 50px;
+}
+
+/* NAVBAR / CABEÇALHO FIXO COM EFEITO DE VIDRO */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: rgba(15, 17, 23, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 255, 157, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: #00ff9d;
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    text-shadow: 0 0 12px rgba(0, 255, 157, 0.4);
+    cursor: pointer;
+}
+
+.carrinho-topo {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.carrinho-topo:hover {
+    border-color: #00ff9d;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.carrinho-topo strong {
+    color: #00ff9d;
+}
+
+/* CONTAINER PRINCIPAL */
+.container {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ============================================================ */
+/* ESTILOS DAS TELAS E CONTEÚDOS                                */
+/* ============================================================ */
+
+/* BOAS-VINDAS / MENU PRINCIPAL */
+.boas-vindas {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.boas-vindas h1 {
+    font-size: 38px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #ffffff 0%, #00ff9d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.boas-vindas h2 {
+    font-size: 20px;
+    color: #00bfff;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.boas-vindas p {
+    color: #94a3b8;
+    font-size: 15px;
+}
+
+/* GRADE DE CATEGORIAS */
+.grid-categorias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 24px;
+}
+
+.card-categoria {
+    background: rgba(20, 24, 33, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(8px);
+}
+
+.card-categoria:hover {
+    border-color: #00ff9d;
+    transform: translateY(-8px);
+    background: rgba(20, 24, 33, 0.9);
+    box-shadow: 0 10px 30px -10px rgba(0, 255, 157, 0.3);
+}
+
+.icone-categoria {
+    font-size: 50px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2));
+}
+
+.card-categoria h3 {
+    font-size: 22px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.card-categoria p {
+    font-size: 14px;
+    color: #8b95a5;
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+
+.btn-acessar {
+    display: inline-block;
+    width: 100%;
+    background: linear-gradient(135deg, #00ff9d 0%, #00bfff 100%);
+    color: #07090e;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+}
+
+.btn-acessar:hover {
+    opacity: 0.9;
+    box-shadow: 0 0 15px rgba(0, 255, 157, 0.5);
+}
+
+/* CABEÇALHO DAS CATEGORIAS & BOTÃO VOLTAR */
+.cabecalho-categoria {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 35px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 20px;
+}
+
+.btn-voltar {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.btn-voltar:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: #00ff9d;
+    color: #00ff9d;
+}
+
+.cabecalho-categoria h1 {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+/* GRADE DE PRODUTOS */
+.grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.card-produto {
+    background: rgba(20, 24, 33, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 18px;
+    text-align: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(8px);
+}
+
+.card-produto:hover {
+    border-color: rgba(0, 255, 157, 0.5);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.5);
+}
+
+.card-produto img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card-produto h3 {
+    font-size: 17px;
+    color: #ffffff;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.card-produto .descricao {
+    font-size: 13px;
+    color: #8b95a5;
+    margin-bottom: 12px;
+    min-height: 36px;
+}
+
+.card-produto .preco {
+    font-size: 22px;
+    font-weight: 800;
+    color: #00ff9d;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px rgba(0, 255, 157, 0.2);
+}
+
+.btn-comprar {
+    width: 100%;
+    background: transparent;
+    color: #00ff9d;
+    border: 2px solid #00ff9d;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-comprar:hover {
+    background: #00ff9d;
+    color: #07090e;
+    box-shadow: 0 0 15px rgba(0, 255, 157, 0.4);
+}
+
+/* RODAPÉ */
+footer {
+    text-align: center;
+    margin-top: 60px;
+    color: #525b6a;
+    font-size: 14px;
+}
+
+footer a {
+    color: #00bfff;
+    text-decoration: none;
+}
